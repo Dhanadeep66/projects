@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:f="http://xmlns.jcp.org/jsf/core"
+    xmlns:h="http://xmlns.jcp.org/jsf/html">      
+<h:head>
+  <title>Customer Information System</title>
+  <link rel="stylesheet" type="text/css" href="contact.css"/>
+</h:head>
+ 
+<h:body>
+  <h:form method="post" action="UserBean">
+    <h2>Registration Page</h2>
+        <table>
+          <tr>
+        <td>Customer Name:</td>
+        <td>
+          <h:inputText label="Employee Name"
+                       id="ename" value="#{userBean.empName}"
+                       required="true"/>
+                       <h:message for="ename" style="color: red"/>
+        </td>
+      </tr>
+      <tr>
+        <td>Gender:</td>
+        <td>
+          <h:selectOneRadio label="Gender"
+                            id="gender" value="#{userBean.gender}" required="true">
+            <f:selectItem itemLabel="Male" itemValue="male" />
+            <f:selectItem itemLabel="Female" itemValue="female" />
+          </h:selectOneRadio>
+        <h:message for="gender" style="color: red"/>             
+        </td>
+      </tr>
+       
+      <tr>
+        <td>Date of Birth:</td>
+         <td>
+          <h:inputText label="Date of Birth"
+                       id="dob" value="#{userBean.dob}" required="true">
+            <f:convertDateTime pattern="MM-dd-yy" />
+          </h:inputText> (mm-dd-yy)
+          <h:message for="dob" style="color: red"/>
+        </td>
+      </tr>
+ 
+      <tr>
+        <td>Email Address:</td>
+        <td>
+          <h:inputText label="Email Address"
+                       id="email" value="#{userBean.emailAddress}" required="true"
+                       validator="#{userBean.validateEmail}"/>
+          <h:message for="email" style="color: red"/>
+        </td>
+      </tr>
+       
+      <tr>
+        <td>Mobile Number:</td>
+        <td>
+          <h:inputText label="Mobile Number"
+                       id="mobileno" value="#{userBean.mobileNumber}" required="true">
+          </h:inputText>
+          <h:message for="mobileno" style="color: red"/>
+        </td>
+      </tr>
+    </table>
+    <p><h:commandButton value="Submit" action="confirm" /></p>
+  </h:form>
+</h:body>
+</html>
