@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Attendance form</title>
+<style>
+body
+{
+margin:0;
+padding:0;
+font-family: "Arial";
+background-image: url("dark_green.jpg");
+background-repeat: repeat;
+}
+.login
+{
+    width :392px;
+    overflow:hidden;
+    margin:auto;
+    padding:40px;
+    background: #045041;
+    border-radius: 15px;
+}
+h1
+{
+text-align:center;
+color:green;
+}
+#emp_name,#emp_num,#emp_number,#emp_email
+{
+    width:200px;
+    height: 25px;
+    border: 100px;
+    border-radius: 30px;
+    padding-left: 100px;
+    color: blue;
+    float: left;
+    
+    
+}
+#emp_attendance
+{
+    width:200px;
+    height: 25px;
+
+    border-radius: 30px;
+  
+    color: blue;
+    float: center;
+    margin-left:10%;
+}
+#submit
+{
+width:200px;
+    height: 25px;
+    
+    border-radius: 30px;
+    margin-left:10%;
+    color: blue;
+    float: center;
+}
+#emp_attendance_log
+{
+    width:200px;
+    height: 25px;
+
+    border-radius: 30px;
+  
+    color: blue;
+    float: center;
+    margin-left:10%;
+}
+</style>
+</head>
+<body>
+<h1 >AB Solutions Attendance form</h1>
+<div class = "login" id ="login">
+<form class = "login" id = "login" action = "attendance">
+<input id = "emp_num" name = "emp_num" type = "number" required placeholder="Enter your employee id"><br><br>
+<input id = "emp_name" name = "emp_name" type = "text" required placeholder="Enter your name"><br><br>
+<input id = "emp_number" name = "emp_number" type = "number" required placeholder="Enter mobile number"><br><br>
+<input id = "emp_email" name = "emp_email" type = "email" required placeholder="abc@gmail.com"><br><br>
+<select id ="emp_attendence" name = "emp_attendance"required>
+<option>Select here</option>
+<option>Forenoon</option>
+<option>Afternoon</option>
+</select>
+<h2>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</h2>
+<select name = "emp_attendance_log" id ="emp_attendence_log" required>
+<option>Select here</option>
+<option>Entry</option>
+<option>Exit</option>
+</select>
+<br><br>
+
+<button type = "submit" id = "submit">Submit</button>
+
+
+</form>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Employee attendance monitoring system Sign-Up</title>
+        <style>
+            body{
+                background-image: url('USSR.jfif');
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-size: cover;
+                opacity: 0.9;
+            }
+            legend{
+                font-size: 40px;
+                color: black;
+                text-align: center;
+            }
+            input{
+                padding: 15px;
+                margin-top: 20px;
+                margin-bottom: 40px;
+                margin-left: 130px;
+                background-color: white;
+                display: inline-block;
+                border-radius: 30px;
+                border: none;
+                border-bottom: 2px solid white;
+                box-sizing: border-box;
+                font-size: 20px;
+                color: black;
+            }
+            input::placeholder{
+                color: black;
+            }
+            fieldset{
+                background-color: black;
+                border: none;
+            }
+            label{
+                color: black;
+                font-size: 20px;
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            }
+        </style>
+        <script>
+            function myFunction(){
+            let x = doucment.forms["myform"]["fname"].value;
+            let y = document.forms["myform"]["lname"].value;
+            if(x == "" || y == ""){
+                  alert("name must be filled");
+                  return false;
+             }
+          }
+        </script>
+    </head>
+    <body>
+        <form action="signup" method = "post" onsubmit="return myFunction()" name="myform">
+        <h1 style="text-align: center">Sign Up</h1>
+                <br><br>
+                    <label class="label">Full name</label>
+                    <input name = "fname" type="text" placeholder="First name" size="30" id="fname" required>
+                    <input name = "lname" type="text", placeholder="Last name", size="30", style = "margin-left: 30px;" id = "lname" required><br>
+                    <label class="label" style="margin-right: 40px;">Email</label>
+                    <input name = "email" type="text" placeholder = "Email", style="margin-right: 40px"size="40" required><br>
+                    <label class="label">Password</label>
+                    <input name = "pass" type="password", placeholder="Password", size="40" style="margin-right: 50px;", id="password" maxlength=8 required><br>
+                    <input type="password", placeholder="Retype Password", size="40", style="position: relative;left: 94px;top: -15px;", id="repassword"><br>
+                    <span style="font-size: medium; color: red;", id="result"></span><br>
+                    <label class="label">Gender</label>
+                    <input type="radio", value="Male", id="male", name="gender" required>
+                    <label for="male", style="color: aliceblue; font-size: 30px;">Male</label>
+                    <input type="radio", value="Female", id="female", name="gender" required>
+                    <label for="female", style="color: aliceblue; font-size: 30px;">Female</label><br>
+                    <label class="label">Date-Of-Birth:</label>
+                    <input name = "date" type="date", placeholder="Date-Of-Birth", size="50" style="position: relative;left: -45px;" required><br>
+                    <label class="label">Address</label>
+                    <input name="address" type="text", placeholder="Street address 1", size="50", style="position: relative;left: 5px;" required><br>
+                    <input name = "address1" type="text", placeholder="Street address 2", size="50", style="position: relative;left: 85px; top: -15px;"><br>
+                    <label class="label">Mobile number</label>
+                    <input name = "number" type="number", placeholder="Mobile number", size="30", style="position: relative;left: -66px;" required><br>
+                    <label class="label">ZIP code: </label>
+                    <input name = "zip" type="text", placeholder="zip code", size="10", style="position: relative;left: -10px;" required>
+                    <label class="label", style="position: relative;right: -120px;">city:</label>
+                    <input name="city" type="text", placeholder="city", size="20", style="position: relative;right: -10px;" required><br>
+                    <label class="label">State:</label>
+                    <input name="state" type="text", placeholder="state", size="25", style="position: relative;right: -25px;" required>
+                    <label class="label", style="position: relative;right: -80px;">Country:</label>
+                    <input name="country" type="text", placeholder="country", size="25", style="position: relative;right: -(6)px;" required>
+                    <input type="submit", value="Submit" style="background-color: aliceblue;background-color: black;color: aliceblue;padding-left: 200px;padding-right: 200px;padding-top: 20px;">
+        </form>
+    </body>
+</html>

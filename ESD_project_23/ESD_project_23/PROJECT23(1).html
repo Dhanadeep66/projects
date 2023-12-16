@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Register for E-attendance and monitoring</title>
+      <style>
+       form{
+           width: 15cm;
+           height: 10cm;
+           background-color: green;
+           position: relative;right: -14cm;bottom: -2cm;
+           box-shadow: 10px 10px 5px black;
+           border-radius: 10px;
+       }
+       input{
+           background-color: white;
+           size: "30";
+           position: relative;right: -130px;bottom: -160px;
+           border-radius: 10px;
+           box-sizing: border-box;
+           width: 300px;
+           height: 50px;
+           font-size: 20px;
+        }
+    </style>
+   </head>
+   <body style="background-image: url('Blue_sky_and_green_grass-wide.jpg');">
+       <h1 style="text-align: center; color:whitesmoke;position: relative;left: -25px;">Register (only for Employees)</h1>
+       <form action="/action_page.php" method="post">
+           <h2 style="text-align: center;position: relative;bottom: -3cm;color: white;">Enter your Employee Reference Number</h2>
+           <input type="text", placeholder="ref number", id="ref">
+           <span id="result", style="color:red; position:relative;bottom: -7cm;left: -4cm;font-size: 18px;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;"></span>
+       </form>
+       <input type="submit", style="position: relative;right: -17.5cm;bottom: -2.5cm;padding: 5px;padding-left: 1cm;padding-right: 1cm;" onClick="myFunction()"/>
+       <script>
+        function myFunction(){
+            if(document.getElementById("ref").value == 1){
+                window.location.href="http://127.0.0.1:5500/ESD%20projects/PROJECT%2023(2)_preface.html";
+            }
+            else if(document.getElementById("ref").value == ""){
+                document.getElementById("result").innerHTML = "ref number field cannot be empty"
+            }
+            else{
+                document.getElementById("result").innerHTML = "reference number does not exist"
+            }
+        }
+    </script>
+   </body>
+</html>
